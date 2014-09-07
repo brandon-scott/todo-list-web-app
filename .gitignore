@@ -1,3 +1,9 @@
+# Visual Studio build objects
+bin/
+csx/
+obj/
+rcf/
+
 # User-specific files
 *.suo
 *.user
@@ -20,3 +26,5 @@ ClientBin/
 *.pfx
 *.publishsettings
 node_modules/
+bower_components/
+*.userprefs
