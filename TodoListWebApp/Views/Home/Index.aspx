@@ -20,7 +20,7 @@
 
     <script type="text/x-handlebars" data-template-name="todos">
     	<header class="container text-center">
-    			<h1>What do you need todo?</h1>
+    			<h1>What do you need to do?</h1>
     		</header>
 
     		<section id="main" class="container">
@@ -57,9 +57,11 @@
     				<div id="panel-center" class="col-md-6">
     					<ul class="list-unstyled">
     						{{#each itemController="todo"}}
-    							<li {{bind-attr class=":clearfix isDone:done"}}>
-    								{{input type="checkbox" checked=isDone class="toggle"}}
-    								<label>{{title}}</label>
+    							<li {{bind-attr class=":clearfix isDone:done :item-row"}}>
+    								{{input type="checkbox" checked=isDone}}
+    								<label {{action "showDetails" on="click"}} class="detail-panel-link">
+    									{{title}}
+									</label>
 	    							<div class="pull-right">
 	    								<button type="button" class="btn btn-default btn-sm" {{action "deleteTodo"}}>
 	    									<span class="pull-right glyphicon glyphicon-trash"></span>
@@ -75,19 +77,23 @@
     				</div>
 
     				<div id="panel-right" class="col-md-3">
-    					<h4>This is the name of the task</h4>
-    					<div>
-    						<label>Labels</label>
-    						<input type="text" class="form-control">
+    					{{#each itemController="todo"}}
+    					<div {{bind-attr class=":details-panel isDetailVisible:visible"}}>
+    						<h4>{{title}}</h4>
+							<div>
+								<label>Labels</label>
+								{{input type="text" class="form-control" value=labels focus-out="saveChanges"}}
+							</div>
+							<div>
+								<label>Deadline</label>
+								{{input type="text" class="form-control" value=due focus-out="saveChanges"}}
+							</div>
+							<div>
+								<label>Description</label>
+								{{textarea class="form-control" value=description focus-out="saveChanges"}}
+							</div>
     					</div>
-    					<div>
-    						<label>Deadline</label>
-    						<input type="text" class="form-control">
-    					</div>
-    					<div>
-    						<label>Description</label>
-    						<textarea class="form-control"></textarea>
-    					</div>
+    					{{/each}}
     				</div>
     			</div>
 
@@ -106,7 +112,7 @@
     			</p>
     		</footer>
     </script>
-
+    	
 	<script src="scripts/lib/jquery.min.js"></script>
 	<script src="scripts/lib/handlebars.min.js"></script>
 	<script src="scripts/lib/ember.js"></script>
