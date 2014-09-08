@@ -92,10 +92,11 @@
     <Content Include="Content\css\bootstrap.min.css" />
     <Content Include="Content\css\bootstrap-datetimepicker.min.css" />
     <Content Include="Scripts\lib\bootstrap-datetimepicker.min.js" />
-    <Content Include="Scripts\lib\bootstrap-tagsinput.js" />
     <Content Include="Content\css\bootstrap-tagsinput.css" />
     <Content Include="Scripts\app.js" />
+    <Content Include="Scripts\lib\bootstrap-tagsinput.min.js" />
     <Content Include="Content\css\style.css" />
+    <Content Include="Scripts\router.js" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
@@ -111,4 +112,8 @@
       </Properties>
     </MonoDevelop>
   </ProjectExtensions>
+  <ItemGroup>
+    <None Include="Scripts\lib\jquery.min.map" />
+    <None Include="Scripts\lib\bootstrap-tagsinput.min.js.map" />
+  </ItemGroup>
 </Project>
