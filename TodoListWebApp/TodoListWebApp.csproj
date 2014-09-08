@@ -72,6 +72,8 @@
     <Folder Include="Content\fonts\" />
     <Folder Include="Content\css\" />
     <Folder Include="Content\css\less\" />
+    <Folder Include="Scripts\app\" />
+    <Folder Include="Scripts\app\controllers\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Web.config" />
@@ -93,10 +95,17 @@
     <Content Include="Content\css\bootstrap-datetimepicker.min.css" />
     <Content Include="Scripts\lib\bootstrap-datetimepicker.min.js" />
     <Content Include="Content\css\bootstrap-tagsinput.css" />
-    <Content Include="Scripts\app.js" />
     <Content Include="Scripts\lib\bootstrap-tagsinput.min.js" />
-    <Content Include="Content\css\style.css" />
-    <Content Include="Scripts\router.js" />
+    <Content Include="Scripts\lib\ember.js" />
+    <Content Include="Scripts\lib\ember-data.js" />
+    <Content Include="Content\css\app.css" />
+    <Content Include="Content\css\less\app.less" />
+    <Content Include="Content\css\less\imports.less" />
+    <Content Include="Scripts\app\models\todo.js" />
+    <Content Include="Scripts\app\app.js" />
+    <Content Include="Scripts\app\router.js" />
+    <Content Include="Scripts\app\controllers\todos_controller.js" />
+    <Content Include="Scripts\app\controllers\todo_controller.js" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
