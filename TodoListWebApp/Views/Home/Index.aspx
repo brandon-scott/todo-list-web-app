@@ -9,6 +9,7 @@
 	<title>Todo List Web App</title>
 
 	<link rel="stylesheet" href="content/css/bootstrap.min.css">
+	<link rel="stylesheet" href="content/css/bootstrap-tagsinput.css">
 	<link rel="stylesheet" href="content/css/app.css">
 
 	<!-[if lt IE 9]>
@@ -82,7 +83,7 @@
     						<h4>{{title}}</h4>
 							<div>
 								<label>Labels</label>
-								{{input type="text" class="form-control" value=labels focus-out="saveChanges"}}
+								{{input type="text" class="form-control" value=labels focus-out="saveChanges" class="tagsinput"}}
 							</div>
 							<div>
 								<label>Deadline</label>
