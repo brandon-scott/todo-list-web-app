@@ -11,6 +11,9 @@
 			var todo = this.get('model');
 			todo.deleteRecord();
 			todo.save();
+		},
+		saveChanges: function() {
+			this.get('model').save();
 		}
 	},
 	isDone: function(key, value) {

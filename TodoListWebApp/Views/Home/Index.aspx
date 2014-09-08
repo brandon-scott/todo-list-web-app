@@ -82,15 +82,15 @@
     						<h4>{{title}}</h4>
 							<div>
 								<label>Labels</label>
-								<input type="text" class="form-control">
+								{{input type="text" class="form-control" value=labels focus-out="saveChanges"}}
 							</div>
 							<div>
 								<label>Deadline</label>
-								<input type="text" class="form-control">
+								{{input type="text" class="form-control" value=due focus-out="saveChanges"}}
 							</div>
 							<div>
 								<label>Description</label>
-								{{textarea value=description class="form-control"}}
+								{{textarea class="form-control" value=description focus-out="saveChanges"}}
 							</div>
     					</div>
     					{{/each}}
@@ -126,5 +126,4 @@
 	<script src="scripts/app/models/todo.js"></script>
 	<script src="scripts/app/controllers/todo_controller.js"></script>
 	<script src="scripts/app/controllers/todos_controller.js"></script>
-	<script src="scripts/app/views/todos_view.js"></script>
 </body>

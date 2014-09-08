@@ -74,7 +74,6 @@
     <Folder Include="Content\css\less\" />
     <Folder Include="Scripts\app\" />
     <Folder Include="Scripts\app\controllers\" />
-    <Folder Include="Scripts\app\views\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Web.config" />
@@ -107,7 +106,6 @@
     <Content Include="Scripts\app\router.js" />
     <Content Include="Scripts\app\controllers\todos_controller.js" />
     <Content Include="Scripts\app\controllers\todo_controller.js" />
-    <Content Include="Scripts\app\views\todos_view.js" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
