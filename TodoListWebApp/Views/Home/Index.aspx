@@ -118,6 +118,8 @@
 	<script src="scripts/lib/handlebars.min.js"></script>
 	<script src="scripts/lib/ember.js"></script>
 	<script src="scripts/lib/ember-data.js"></script>
+	<script src="https://cdn.firebase.com/js/client/1.0.21/firebase.js"></script>
+	<script src="https://cdn.firebase.com/libs/emberfire/1.1.3/emberfire.min.js"></script>
 	<script src="scripts/lib/bootstrap.min.js"></script>
 	<script src="scripts/lib/bootstrap-tagsinput.min.js"></script>
 	<script src="scripts/lib/moment.min.js"></script>
