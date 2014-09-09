@@ -34,5 +34,8 @@ Em.TextField.reopen({
 		if(this.$().hasClass('tagsinput')) {
 			this.$().tagsinput('items');
 		}
+		this.$().on('itemAdded itemRemoved', function(){
+			$(this).focusout();
+		});
 	}.on('didInsertElement')
 });
