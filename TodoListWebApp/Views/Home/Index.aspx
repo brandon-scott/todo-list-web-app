@@ -10,6 +10,7 @@
 
 	<link rel="stylesheet" href="content/css/bootstrap.min.css">
 	<link rel="stylesheet" href="content/css/bootstrap-tagsinput.css">
+	<link rel="stylesheet" href="content/css/bootstrap-datetimepicker.min.css">
 	<link rel="stylesheet" href="content/css/app.css">
 
 	<!-[if lt IE 9]>
@@ -21,14 +22,14 @@
 
     <script type="text/x-handlebars" data-template-name="todos">
     	<header class="container text-center">
-    			<h1>What do you need to do?</h1>
+    			<h1>What to do?</h1>
     		</header>
 
     		<section id="main" class="container">
     			<div id="add-task-wrapper" class="row">
     				<div class="col-md-3"></div>
     				<div class="col-md-6">
-    					{{input type="text" placeholder="Add a new task" class="form-control" value=todoValue action="createTodo"}}
+    					{{input type="text" placeholder="Add a new task" class="form-control input-lg" value=todoValue action="createTodo"}}
     				</div>
     				<div class="col-md-3"></div>
     			</div>
@@ -87,7 +88,7 @@
 							</div>
 							<div>
 								<label>Deadline</label>
-								{{input type="text" class="form-control" value=due focus-out="saveChanges"}}
+								{{input type="text" class="form-control datetime-picker-field" value=due focus-out="saveChanges"}}
 							</div>
 							<div>
 								<label>Description</label>

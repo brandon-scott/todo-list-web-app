@@ -30,6 +30,11 @@
 });
 
 Em.TextField.reopen({
+	dateTimePicker: function(){
+		if(this.$().hasClass('datetime-picker-field')) {
+			this.$().datetimepicker();
+		}
+	}.on('didInsertElement'),
 	tagsInput: function() {
 		if(this.$().hasClass('tagsinput')) {
 			this.$().tagsinput('items');
