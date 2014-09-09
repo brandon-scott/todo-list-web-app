@@ -21,42 +21,21 @@
 <body>
 
     <script type="text/x-handlebars" data-template-name="todos">
-    	<header class="container text-center">
-    			<h1>What to do?</h1>
+    	<header class="container">
+    			<h1>ToDo App</h1>
     		</header>
 
     		<section id="main" class="container">
     			<div id="add-task-wrapper" class="row">
-    				<div class="col-md-3"></div>
-    				<div class="col-md-6">
-    					{{input type="text" placeholder="Add a new task" class="form-control input-lg" value=todoValue action="createTodo"}}
+    				<div class="col-md-8">
+    					{{input type="text" placeholder="Enter a new task" class="form-control input-lg" value=todoValue action="createTodo"}}
     				</div>
-    				<div class="col-md-3"></div>
+    				<div class="col-md-4"></div>
     			</div>
 
     			<div id="panels-wrapper" class="row">
-    				
-    				<div id="panel-left" class="col-md-3">
-    					<div>
-    						<h3>Tags</h3>
-    						<ul>
-    							<li>tag 1</li>
-    							<li>tag 2</li>
-    							<li>tag 3</li>
-    						</ul>
-    					</div>
 
-    					<div>
-    						<h3>Ignored Tasks</h3>
-    						<ul>
-    							<li>task 1</li>
-    							<li>task 2</li>
-    							<li>task 3</li>
-    						</ul>
-    					</div>
-    				</div>
-
-    				<div id="panel-center" class="col-md-6">
+    				<div id="panel-center" class="col-md-8">
     					<ul class="list-unstyled">
     						{{#each itemController="todo"}}
     							<li {{bind-attr class=":clearfix isDone:done :item-row"}}>
@@ -68,29 +47,26 @@
 	    								<button type="button" class="btn btn-default btn-sm" {{action "deleteTodo"}}>
 	    									<span class="pull-right glyphicon glyphicon-trash"></span>
 	    								</button>
-
-	    								<button type="button" class="btn btn-default btn-sm">
-	    									<span class="pull-right glyphicon glyphicon-eye-close"></span>
-	    								</button>
 	    							</div>
     							</li>
     						{{/each}}
     					</ul>
     				</div>
 
+    				<div class="col-md-1"></div>
     				<div id="panel-right" class="col-md-3">
     					{{#each itemController="todo"}}
     					<div {{bind-attr class=":details-panel isDetailVisible:visible"}}>
     						<h4>{{title}}</h4>
-							<div>
+							<div class="row">
 								<label>Labels</label>
 								{{input type="text" class="form-control" value=labels focus-out="saveChanges" class="tagsinput"}}
 							</div>
-							<div {{bind-attr class="isDueDateNear:error-input-wrapper"}}>
+							<div {{bind-attr class="isDueDateNear:error-input-wrapper :row"}}>
 								<label>Due Date</label>
 								{{input type="text" class="form-control datetime-picker-field" value=due focus-out="saveChanges"}}
 							</div>
-							<div>
+							<div class="row">
 								<label>Description</label>
 								{{textarea class="form-control" value=description focus-out="saveChanges"}}
 							</div>
@@ -100,16 +76,15 @@
     			</div>
 
     			<div id="grouping-status-wrapper" class="row">
-    				<div class="col-md-3"></div>
-    				<div class="col-md-6">
+    				<div class="col-md-8">
     					<p class="text-center">{{count}} {{countText}} remaining</p>
     				</div>
-    				<div class="col-md-3"></div>
+    				<div class="col-md-4"></div>
     			</div>
     		</section>
 
     		<footer class="container">
-    			<p class="text-center">
+    			<p>
     				<small>Todo List App by Brandon Scott | v.0.0.1</small>
     			</p>
     		</footer>
