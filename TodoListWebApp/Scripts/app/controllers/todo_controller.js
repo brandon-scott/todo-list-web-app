@@ -28,3 +28,14 @@
 		}
 	}.property('model.isDone')
 });
+
+Em.TextField.reopen({
+	tagsInput: function() {
+		if(this.$().hasClass('tagsinput')) {
+			this.$().tagsinput('items');
+		}
+		this.$().on('itemAdded itemRemoved', function(){
+			$(this).focusout();
+		});
+	}.on('didInsertElement')
+});

@@ -2,8 +2,12 @@
 	title: DS.attr('string'),
 	description: DS.attr('string'),
 	due: DS.attr('string'),
-	labels: DS.attr(),
+	labels: DS.attr('string'),
 	isDone: DS.attr('boolean')
+});
+
+App.TodoAdapter = DS.FirebaseAdapter.extend({
+	firebase: new Firebase('https://bscott-test.firebaseio.com')
 });
 
 App.Todo.FIXTURES = [

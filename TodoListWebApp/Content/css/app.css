@@ -1,1 +1,1 @@
-.done label{text-decoration:line-through}.details-panel{display:none}.details-panel.visible{display:block}
+.done label{text-decoration:line-through}#panel-center>ul .item-row{padding:10px;border-bottom:1px solid #ddd}.details-panel{display:none}.details-panel.visible{display:block}.details-panel label{display:block}.bootstrap-tagsinput{padding:4px 6px 6px;width:100%}

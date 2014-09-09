@@ -3,9 +3,25 @@
 		text-decoration: line-through;
 	}
 }
+#panel-center {
+    >ul {
+        .item-row {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+    }
+}
 .details-panel {
     display: none;
     &.visible {
         display: block;
     }
+
+    label {
+        display: block;
+    }
+}
+.bootstrap-tagsinput {
+    padding: 4px 6px 6px;
+    width: 100%;
 }
