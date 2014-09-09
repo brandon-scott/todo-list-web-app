@@ -86,7 +86,7 @@
 								<label>Labels</label>
 								{{input type="text" class="form-control" value=labels focus-out="saveChanges" class="tagsinput"}}
 							</div>
-							<div>
+							<div {{bind-attr class="isDueDateNear:error-input-wrapper"}}>
 								<label>Deadline</label>
 								{{input type="text" class="form-control datetime-picker-field" value=due focus-out="saveChanges"}}
 							</div>
