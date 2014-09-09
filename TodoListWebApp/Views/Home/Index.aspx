@@ -61,7 +61,7 @@
     						{{#each itemController="todo"}}
     							<li {{bind-attr class=":clearfix isDone:done :item-row"}}>
     								{{input type="checkbox" checked=isDone}}
-    								<label {{action "showDetails" on="click"}} class="detail-panel-link">
+    								<label {{action "showDetails" on="click"}} {{bind-attr class=":detail-panel-link isDueDateNear:error"}}>
     									{{title}}
 									</label>
 	    							<div class="pull-right">
@@ -87,7 +87,7 @@
 								{{input type="text" class="form-control" value=labels focus-out="saveChanges" class="tagsinput"}}
 							</div>
 							<div {{bind-attr class="isDueDateNear:error-input-wrapper"}}>
-								<label>Deadline</label>
+								<label>Due Date</label>
 								{{input type="text" class="form-control datetime-picker-field" value=due focus-out="saveChanges"}}
 							</div>
 							<div>
@@ -110,7 +110,7 @@
 
     		<footer class="container">
     			<p class="text-center">
-    				<small>Todo List App by Brandon Scott</small>
+    				<small>Todo List App by Brandon Scott | v.0.0.1</small>
     			</p>
     		</footer>
     </script>

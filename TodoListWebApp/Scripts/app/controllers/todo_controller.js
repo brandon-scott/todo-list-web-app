@@ -29,6 +29,7 @@
 	}.property('model.isDone'),
 
 	isDueDateNear: function() {
+		if(this.get('model').get('isDone')) {return false;}
 		var dueTime = Date.parse(this.get('due')),
 			currentTime = Date.parse(new Date()),
 			compareTime = (dueTime - currentTime),
