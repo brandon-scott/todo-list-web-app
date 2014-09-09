@@ -26,7 +26,28 @@
 			model.save();
 			return value;
 		}
-	}.property('model.isDone')
+	}.property('model.isDone'),
+
+	isDueDateNear: function() {
+		if(this.get('model').get('isDone')) {return false;}
+		var dueTime = Date.parse(this.get('due')),
+			currentTime = Date.parse(new Date()),
+			compareTime = (dueTime - currentTime),
+			oneDay = 86400000;
+
+		if(!isNaN(dueTime)) {
+			if(compareTime > oneDay) {
+				// more than 24 hours
+				return false;
+			} else if(compareTime < oneDay && compareTime >= 0) {
+				// less than 24 hours
+				return true;
+			} else {
+				// date is in past
+				return true;
+			}
+		}
+	}.on('init').property('model.due')
 });
 
 Em.TextField.reopen({
